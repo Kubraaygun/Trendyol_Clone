@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator();
 // create a component
 const RootNavigator: React.FC<Props> = ({navigation, route}) => {
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
+    <Stack.Navigator>
       <Stack.Screen name="TabNavigator" component={TabNavigator} />
     </Stack.Navigator>
   );

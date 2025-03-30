@@ -1,0 +1,18 @@
+//import liraries
+import React, {Component} from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Home from '../screens/home';
+
+const Tab = createBottomTabNavigator();
+// create a component
+const TabNavigator: React.FC<Props> = ({navigation, route})=> {
+  return (
+    <Tab.Navigator>
+    <Tab.Screen name="Home" component={Home} />
+  
+  </Tab.Navigator>
+  );
+});
+
+//make this component available to the app
+export default TabNavigator;
