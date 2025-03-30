@@ -29,8 +29,15 @@ const TabNavigator: React.FC = () => {
             />
           );
         },
-        headerRight: () => {
-          return <HeaderRight />;
+        headerRight: ({size, focused, color}) => {
+          return (
+            <HeaderRight
+              route={route}
+              size={size}
+              focused={focused}
+              color={color}
+            />
+          );
         },
       })}>
       <Tab.Screen name={TABNAVIGATOR.HOME} component={Home} />

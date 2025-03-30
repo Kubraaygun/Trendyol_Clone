@@ -29,7 +29,7 @@ const TabNavigator: React.FC = () => {
             />
           );
         },
-        headerRight: () => {
+        headerRight: ({size, focused, color}) => {
           return <HeaderRight />;
         },
       })}>

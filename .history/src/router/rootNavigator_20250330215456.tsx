@@ -1,10 +1,10 @@
 //import liraries
-import React from 'react';
+import Reactfrom 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigator from './tabNavigator';
 import {TABNAVIGATOR} from '../utils/routes';
 const Stack = createNativeStackNavigator();
-
+// create a component
 const RootNavigator: React.FC = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
@@ -13,4 +13,6 @@ const RootNavigator: React.FC = () => {
   );
 };
 
+//make this component available to the app
 export default RootNavigator;
+ 

@@ -9,7 +9,6 @@ import Profile from '../screens/profile';
 import {TABNAVIGATOR} from '../utils/routes';
 import {Colors} from '../theme/colors';
 import TabIcon from '../components/router/tabIcon';
-import HeaderRight from '../components/router/headerRight';
 
 const Tab = createBottomTabNavigator();
 // create a component
@@ -29,8 +28,15 @@ const TabNavigator: React.FC = () => {
             />
           );
         },
-        headerRight: () => {
-          return <HeaderRight />;
+        headerRight: ({size, focused, color}) => {
+          return (
+            <TabIcon
+              route={route}
+              size={size}
+              focused={focused}
+              color={color}
+            />
+          );
         },
       })}>
       <Tab.Screen name={TABNAVIGATOR.HOME} component={Home} />
