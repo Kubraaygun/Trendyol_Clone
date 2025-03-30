@@ -15,20 +15,16 @@ const Tab = createBottomTabNavigator();
 const TabNavigator: React.FC = () => {
   return (
     <Tab.Navigator
-      screenOptions={({route}) => ({
-        tabBarActiveTintColor: Colors.PRIMARY,
-        tabBarInactiveTintColor: Colors.BLACK,
-        tabBarIcon: ({size, focused, color}) => {
-          return (
-            <TabIcon
-              route={route}
-              size={size}
-              focused={focused}
-              color={color}
-            />
-          );
-        },
-      })}>
+    screenOptions={({route})=({
+        screenOptions={{
+            tabBarActiveTintColor: Colors.PRIMARY,
+            tabBarInactiveTintColor: Colors.BLACK,
+            tabBarIcon: ({size, focused, color}) => {
+              return <TabIcon size={size} focused={focused} color={color} />;
+            },
+          }}
+    })}
+     >
       <Tab.Screen name={TABNAVIGATOR.HOME} component={Home} />
       <Tab.Screen name={TABNAVIGATOR.SEARCH} component={Search} />
       <Tab.Screen name={TABNAVIGATOR.FAVORITES} component={Favorites} />

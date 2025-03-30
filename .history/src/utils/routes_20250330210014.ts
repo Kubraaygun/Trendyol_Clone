@@ -1,7 +1,7 @@
 export const TABNAVIGATOR = {
   HOME: 'Anasayfa',
   SEARCH: 'Arama',
-  FAVORITES: 'Favorilerim',
-  CART: 'Sepetim',
-  PROFILE: 'Hesabım',
+  FAVORITES: 'Favoriler',
+  CART: 'Sepet',
+  PROFILE: 'Hesabim',
 };

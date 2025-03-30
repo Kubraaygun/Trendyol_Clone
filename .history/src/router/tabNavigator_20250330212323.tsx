@@ -12,23 +12,16 @@ import TabIcon from '../components/router/tabIcon';
 
 const Tab = createBottomTabNavigator();
 // create a component
-const TabNavigator: React.FC = () => {
+const TabNavigator: React.FC = ({navigation, route}) => {
   return (
     <Tab.Navigator
-      screenOptions={({route}) => ({
+      screenOptions={{
         tabBarActiveTintColor: Colors.PRIMARY,
         tabBarInactiveTintColor: Colors.BLACK,
         tabBarIcon: ({size, focused, color}) => {
-          return (
-            <TabIcon
-              route={route}
-              size={size}
-              focused={focused}
-              color={color}
-            />
-          );
+          return <TabIcon size={size} focused={focused} color={color} />;
         },
-      })}>
+      }}>
       <Tab.Screen name={TABNAVIGATOR.HOME} component={Home} />
       <Tab.Screen name={TABNAVIGATOR.SEARCH} component={Search} />
       <Tab.Screen name={TABNAVIGATOR.FAVORITES} component={Favorites} />

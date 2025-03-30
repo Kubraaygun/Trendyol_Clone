@@ -19,14 +19,7 @@ const TabNavigator: React.FC = () => {
         tabBarActiveTintColor: Colors.PRIMARY,
         tabBarInactiveTintColor: Colors.BLACK,
         tabBarIcon: ({size, focused, color}) => {
-          return (
-            <TabIcon
-              route={route}
-              size={size}
-              focused={focused}
-              color={color}
-            />
-          );
+          return <TabIcon size={size} focused={focused} color={color} />;
         },
       })}>
       <Tab.Screen name={TABNAVIGATOR.HOME} component={Home} />
