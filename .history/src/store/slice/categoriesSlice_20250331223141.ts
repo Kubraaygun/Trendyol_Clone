@@ -1,8 +1,9 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {ProductsState} from '../../models/data/productsState';
+import {CategoriesState} from '../../models/data/cagetoriesState';
 
-const initialState: ProductsState = {
-  products: [],
+const initialState: CategoriesState = {
+  categories: [],
 };
 
 export const productSlice = createSlice({

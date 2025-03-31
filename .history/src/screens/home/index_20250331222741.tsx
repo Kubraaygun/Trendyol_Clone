@@ -5,7 +5,7 @@ import {SafeAreaView, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 import type {RootState} from '../../store/index';
 import {getRequest} from '../../service/verbs';
-import {CATEGORIES_URLS} from '../../service/urls';
+import {CATEGORIES_URLS, PRODUCTS_URLS} from '../../service/urls';
 
 const Stack = createNativeStackNavigator();
 // create a component
