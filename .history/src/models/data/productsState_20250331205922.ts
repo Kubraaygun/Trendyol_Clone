@@ -9,6 +9,5 @@ interface Product {
 
 interface ProductsState {
   products: Product[];
-  deneme: string;
 }
 export type {ProductsState};

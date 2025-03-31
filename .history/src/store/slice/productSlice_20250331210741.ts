@@ -1,9 +1,8 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {ProductsState} from '../../models/data/productsState';
+import productSlice from '../slice/productSlice';
 
 const initialState: ProductsState = {
   products: [],
-  deneme: 'anasayfa',
 };
 
 export const productSlice = createSlice({

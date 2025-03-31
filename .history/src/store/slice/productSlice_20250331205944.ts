@@ -3,7 +3,6 @@ import {ProductsState} from '../../models/data/productsState';
 
 const initialState: ProductsState = {
   products: [],
-  deneme: 'anasayfa',
 };
 
 export const productSlice = createSlice({

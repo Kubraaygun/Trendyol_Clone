@@ -1,17 +1,14 @@
 //import liraries
-import React from 'react';
+import React, {Component} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SafeAreaView, Text} from 'react-native';
-import {useSelector} from 'react-redux';
-import type {RootState} from '../../store/index';
-
 const Stack = createNativeStackNavigator();
 // create a component
 const Home: React.FC<Props> = ({navigation, route}) => {
-  const deneme = useSelector((state: RootState) => state.products.deneme);
+  const deneme = useSelector(state => state.counter.value);
   return (
     <SafeAreaView>
-      <Text>{deneme}</Text>
+      <Text>Home</Text>
     </SafeAreaView>
   );
 };
