@@ -5,7 +5,6 @@ import {getAllCategories} from '../actions/categoriesAction';
 const initialState: CategoriesState = {
   categories: [],
   pending: false,
-  error: null,
 };
 
 export const categoriesSlice = createSlice({
@@ -23,7 +22,7 @@ export const categoriesSlice = createSlice({
       })
       .addCase(getAllCategories.rejected, (state, action) => {
         state.pending = false;
-        state.error = action.error;
+        state.categories = action.payload;
       });
   },
 });

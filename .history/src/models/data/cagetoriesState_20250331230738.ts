@@ -1,6 +1,5 @@
 interface CategoriesState {
   categories: string[];
-  pending: boolean;
-  error: any;
+  pending: boolen;
 }
 export type {CategoriesState};
