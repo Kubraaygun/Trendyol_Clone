@@ -15,6 +15,8 @@ const TabIcon: React.FC<TabIconProps> = ({route, size, color, focused}) => {
       return <Icon name="cart-outline" size={size} color={color} />;
     case TABNAVIGATOR.PROFILE:
       return <Icon name="person-outline" size={size} color={color} />;
+    case TABNAVIGATOR.FAVORITES:
+      return <Icon name="heart-outline" size={size} color={color} />;
   }
 };
 
