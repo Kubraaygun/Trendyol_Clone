@@ -12,7 +12,7 @@ const Home: React.FC<Props> = ({navigation, route}) => {
   const deneme = useSelector((state: RootState) => state.products.deneme);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getAllCategories({page: 1}));
+    dispatch(getAllCategories({}));
   }, []);
   return (
     <SafeAreaView>

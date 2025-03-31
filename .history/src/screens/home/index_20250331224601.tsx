@@ -9,14 +9,13 @@ import {getAllCategories} from '../../store/actions/categoriesAction';
 const Stack = createNativeStackNavigator();
 // create a component
 const Home: React.FC<Props> = ({navigation, route}) => {
-  const deneme = useSelector((state: RootState) => state.products.deneme);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllCategories({page: 1}));
   }, []);
   return (
     <SafeAreaView>
-      <Text>{deneme}</Text>
+      <Text>Home</Text>
     </SafeAreaView>
   );
 };

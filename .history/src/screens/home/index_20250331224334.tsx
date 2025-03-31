@@ -4,6 +4,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SafeAreaView, Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import type {RootState} from '../../store/index';
+import {getRequest} from '../../service/verbs';
+import {CATEGORIES_URLS} from '../../service/urls';
 import {getAllCategories} from '../../store/actions/categoriesAction';
 
 const Stack = createNativeStackNavigator();
@@ -12,7 +14,7 @@ const Home: React.FC<Props> = ({navigation, route}) => {
   const deneme = useSelector((state: RootState) => state.products.deneme);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getAllCategories({page: 1}));
+    dispatch(getAllCategories);
   }, []);
   return (
     <SafeAreaView>
