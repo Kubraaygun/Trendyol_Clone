@@ -38,13 +38,7 @@ const TabIcon: React.FC<TabIconProps> = ({route, size, color, focused}) => {
         />
       );
     case TABNAVIGATOR.PROFILE:
-      return (
-        <Icon
-          name={focused ? 'person' : 'person-outline'}
-          size={size}
-          color={color}
-        />
-      );
+      return <Icon name="person-outline" size={size} color={color} />;
   }
 };
 

@@ -14,37 +14,13 @@ const TabIcon: React.FC<TabIconProps> = ({route, size, color, focused}) => {
         />
       );
     case TABNAVIGATOR.SEARCH:
-      return (
-        <Icon
-          name={focused ? 'search' : 'search-outline'}
-          size={size}
-          color={color}
-        />
-      );
+      return <Icon name="search" size={size} color={color} />;
     case TABNAVIGATOR.FAVORITES:
-      return (
-        <Icon
-          name={focused ? 'heart' : 'heart-outline'}
-          size={size}
-          color={color}
-        />
-      );
+      return <Icon name="heart" size={size} color={color} />;
     case TABNAVIGATOR.CART:
-      return (
-        <Icon
-          name={focused ? 'cart' : 'cart-outline'}
-          size={size}
-          color={color}
-        />
-      );
+      return <Icon name="cart-outline" size={size} color={color} />;
     case TABNAVIGATOR.PROFILE:
-      return (
-        <Icon
-          name={focused ? 'person' : 'person-outline'}
-          size={size}
-          color={color}
-        />
-      );
+      return <Icon name="person-outline" size={size} color={color} />;
   }
 };
 

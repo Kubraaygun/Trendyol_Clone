@@ -20,10 +20,9 @@ const Categories: React.FC<Props> = ({navigation, route}) => {
 
   return (
     <FlatList
-      showsHorizontalScrollIndicator={false}
       horizontal
       data={categories}
-      renderItem={({item}) => <CategoryItem category={item} />}
+      renderItem={({item}) => <CategoryItem />}
     />
   );
 };
