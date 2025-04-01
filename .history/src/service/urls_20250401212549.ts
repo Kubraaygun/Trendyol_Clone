@@ -1,8 +1,7 @@
 export const BASE_URL = 'https://fakestoreapi.com/';
 export const PRODUCTS_URLS = {
   ALL_PRODUCTS: 'products',
-  BEST_SELLER_PRODUCTS: 'products/category/women"s clothing',
-  POPULAR_PRODUCTS: 'products/category/men"s clothing',
+  BEST_SELLER_PRODUCTS: 'products/category/jewelery',
 };
 export const CART_URLS = {
   CARTS: 'carts',

@@ -14,7 +14,7 @@ export const productSlice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder.addCase(getBestSellerProducts.fulfilled, (state, action) => {
-      state.bestSellerProducts = action.payload;
+      state.getBestSellerProducts = action.payload;
     });
   },
 });
