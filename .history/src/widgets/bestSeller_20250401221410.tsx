@@ -1,6 +1,6 @@
 //import liraries
 import React, {useEffect} from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {StyleSheet, FlatList, Pressable} from 'react-native';
 import WidgetHeader from '../components/widgets/widgetHeader';
 import {useDispatch, useSelector} from 'react-redux';
 import {getBestSellerProducts} from '../store/actions/productsActions';
@@ -18,23 +18,20 @@ const BestSeller: React.FC = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container}>
       <WidgetHeader title="Cok Satan Urunler" />
       <FlatList
-        showsHorizontalScrollIndicator={false}
         horizontal
         data={bestSellerProducts}
         renderItem={({item}) => <ProductItem product={item} />}
       />
-    </View>
+    </Pressable>
   );
 };
 
 // define your styles
 const styles = StyleSheet.create({
-  container: {
-    marginVertical: 5,
-  },
+  container: {},
 });
 
 //make this component available to the app

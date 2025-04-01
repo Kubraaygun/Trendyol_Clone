@@ -22,20 +22,8 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
         style={{fontSize: 14, fontWeight: 'bold', marginVertical: 5}}>
         {product.title}
       </Text>
-      <Text
-        numberOfLines={2}
-        style={{fontSize: 14, color: Colors.GRAY, marginVertical: 5}}>
-        {product.category}
-      </Text>
-      <Text
-        numberOfLines={2}
-        style={{
-          fontSize: 18,
-          fontWeight: 'bold',
-          marginVertical: 5,
-          color: Colors.PRIMARY,
-        }}>
-        {product.price} TL
+      <Text numberOfLines={2} style={{fontSize: 14, color: Colors.PRIMARY}}>
+        {product.price}
       </Text>
     </Pressable>
   );

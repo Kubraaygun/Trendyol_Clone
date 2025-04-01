@@ -24,11 +24,6 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
       </Text>
       <Text
         numberOfLines={2}
-        style={{fontSize: 14, color: Colors.GRAY, marginVertical: 5}}>
-        {product.category}
-      </Text>
-      <Text
-        numberOfLines={2}
         style={{
           fontSize: 18,
           fontWeight: 'bold',

@@ -21,7 +21,6 @@ const BestSeller: React.FC = () => {
     <View style={styles.container}>
       <WidgetHeader title="Cok Satan Urunler" />
       <FlatList
-        showsHorizontalScrollIndicator={false}
         horizontal
         data={bestSellerProducts}
         renderItem={({item}) => <ProductItem product={item} />}
@@ -32,9 +31,7 @@ const BestSeller: React.FC = () => {
 
 // define your styles
 const styles = StyleSheet.create({
-  container: {
-    marginVertical: 5,
-  },
+  container: {},
 });
 
 //make this component available to the app

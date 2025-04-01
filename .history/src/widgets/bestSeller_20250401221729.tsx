@@ -33,7 +33,7 @@ const BestSeller: React.FC = () => {
 // define your styles
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 5,
+    marginVertical: 10,
   },
 });
 

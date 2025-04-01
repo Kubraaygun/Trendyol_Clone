@@ -14,28 +14,14 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
           width: width * 0.25,
           height: height * 0.15,
           resizeMode: 'contain',
-          alignSelf: 'center',
+          alignItems: 'center',
         }}
       />
-      <Text
-        numberOfLines={2}
-        style={{fontSize: 14, fontWeight: 'bold', marginVertical: 5}}>
+      <Text numberOfLines={2} style={{fontSize: 14, fontWeight: 'bold'}}>
         {product.title}
       </Text>
-      <Text
-        numberOfLines={2}
-        style={{fontSize: 14, color: Colors.GRAY, marginVertical: 5}}>
-        {product.category}
-      </Text>
-      <Text
-        numberOfLines={2}
-        style={{
-          fontSize: 18,
-          fontWeight: 'bold',
-          marginVertical: 5,
-          color: Colors.PRIMARY,
-        }}>
-        {product.price} TL
+      <Text numberOfLines={2} style={{fontSize: 14, color: Colors.PRIMARY}}>
+        {product.price}
       </Text>
     </Pressable>
   );
