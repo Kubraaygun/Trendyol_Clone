@@ -10,7 +10,7 @@ interface Product {
   category: string;
   description: string;
   image: string;
-  rating: Rating;
+  rating: object;
 }
 
 interface ProductsState {

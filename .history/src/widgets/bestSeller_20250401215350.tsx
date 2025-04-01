@@ -1,29 +1,22 @@
 //import liraries
 import React, {useEffect} from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import WidgetHeader from '../components/widgets/widgetHeader';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {getBestSellerProducts} from '../store/actions/productsActions';
-import {RootState} from '../store/index';
-import ProductItem from '../components/products/productItem';
+import  RootState  from '../store/index';
 
 // create a component
 const BestSeller: React.FC = () => {
-  const bestSellerProducts = useSelector(
-    (state: RootState) => state.products.bestSellerProducts,
-  );
+    const bestSellerProducts=useSelector(state:RootState=>)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBestSellerProducts());
   }, []);
-
   return (
     <View style={styles.container}>
       <WidgetHeader title="Cok Satan Urunler" />
-      <FlatList
-        data={bestSellerProducts}
-        renderItem={({item}) => <ProductItem product={item} />}
-      />
+      <Text>BestSeller</Text>
     </View>
   );
 };

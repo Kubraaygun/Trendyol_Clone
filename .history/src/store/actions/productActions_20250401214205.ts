@@ -9,6 +9,7 @@ const getBestSellerProducts = createAsyncThunk(
       params,
       PRODUCTS_URLS.BEST_SELLER_PRODUCTS,
     );
+    console.log(response.data);
     return response.data;
   },
 );

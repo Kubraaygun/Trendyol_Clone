@@ -1,8 +1,3 @@
-interface Rating {
-  count: number;
-  rate: number;
-}
-
 interface Product {
   id: number;
   title: string;
@@ -10,7 +5,6 @@ interface Product {
   category: string;
   description: string;
   image: string;
-  rating: Rating;
 }
 
 interface ProductsState {

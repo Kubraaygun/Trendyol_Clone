@@ -22,7 +22,7 @@ const BestSeller: React.FC = () => {
       <WidgetHeader title="Cok Satan Urunler" />
       <FlatList
         data={bestSellerProducts}
-        renderItem={({item}) => <ProductItem product={item} />}
+        renderItem={({item}) => <ProductItem />}
       />
     </View>
   );
