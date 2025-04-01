@@ -8,7 +8,8 @@ const defaultScreenStyles = StyleSheet.create({
   },
 
   container: {
-    padding: 10,
+    flex: 1,
+    backgroundColor: Colors.WHITE,
   },
 });
 export {defaultScreenStyles};

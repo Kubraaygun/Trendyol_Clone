@@ -9,10 +9,9 @@ const Introduction: React.FC = () => {
       <Image
         source={require('../assets/images/ramazan.jpg')}
         style={{
-          width: width - 15,
+          width: width * 0.9,
           height: height * 0.2,
           resizeMode: 'stretch',
-          borderRadius: 8,
         }}
       />
     </Pressable>
@@ -23,8 +22,6 @@ const Introduction: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 10,
   },
 });
 

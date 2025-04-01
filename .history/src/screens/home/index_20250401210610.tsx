@@ -6,7 +6,6 @@ import Categories from '../../widgets/categories';
 import {defaultScreenStyles} from '../../styles/defaultScreenStyle';
 import Introduction from '../../widgets/introduction';
 import BestSeller from '../../widgets/bestSeller';
-import PopularProducts from '../../widgets/popularProducts';
 
 const Stack = createNativeStackNavigator();
 // create a component
@@ -17,7 +16,6 @@ const Home: React.FC<Props> = ({navigation, route}) => {
         <Categories />
         <Introduction />
         <BestSeller />
-        <PopularProducts />
       </View>
     </SafeAreaView>
   );
