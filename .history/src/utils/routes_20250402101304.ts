@@ -7,7 +7,11 @@ export const TABNAVIGATOR = {
   PROFILE: 'Hesabım',
 };
 
-export const PRODUCTSNAVIGATOR = {
-  PRODUCTSLIST: 'Tüm Ürünler',
-  PRODUCTDETAIL: 'Ürün Detayı',
+export const PRODUCT_NAVIGATOR = {
+  TABNAVIGATOR: 'TABNAVIGATOR',
+  HOME: 'Anasayfa',
+  SEARCH: 'Arama',
+  FAVORITES: 'Favorilerim',
+  CART: 'Sepetim',
+  PROFILE: 'Hesabım',
 };

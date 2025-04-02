@@ -8,6 +8,10 @@ export const TABNAVIGATOR = {
 };
 
 export const PRODUCTSNAVIGATOR = {
-  PRODUCTSLIST: 'Tüm Ürünler',
-  PRODUCTDETAIL: 'Ürün Detayı',
+  TABNAVIGATOR: 'TABNAVIGATOR',
+  HOME: 'Anasayfa',
+  SEARCH: 'Arama',
+  FAVORITES: 'Favorilerim',
+  CART: 'Sepetim',
+  PROFILE: 'Hesabım',
 };
