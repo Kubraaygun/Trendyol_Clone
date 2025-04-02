@@ -1,8 +1,8 @@
 //import liraries
-import React, {useEffect} from 'react';
+import React from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
 import WidgetHeader from '../components/widgets/widgetHeader';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {RootState} from '../store/index';
 import ProductItem from '../components/products/productItem';
 import {getPopularProducts} from '../store/actions/productsActions';

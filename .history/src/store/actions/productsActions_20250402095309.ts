@@ -13,12 +13,15 @@ const getBestSellerProducts = createAsyncThunk(
     return response.data;
   },
 );
-const getPopularProducts = createAsyncThunk(
-  'products/getPopularProducts',
+const getBestSellerProducts = createAsyncThunk(
+  'products/getBestSellerProducts',
   async (params: object) => {
-    const response = await getRequest(params, PRODUCTS_URLS.POPULAR_PRODUCTS);
+    const response = await getRequest(
+      params,
+      PRODUCTS_URLS.BEST_SELLER_PRODUCTS,
+    );
 
     return response.data;
   },
 );
-export {getBestSellerProducts, getPopularProducts};
+export {getBestSellerProducts};

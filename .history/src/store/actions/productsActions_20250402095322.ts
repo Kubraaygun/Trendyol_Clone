@@ -14,9 +14,12 @@ const getBestSellerProducts = createAsyncThunk(
   },
 );
 const getPopularProducts = createAsyncThunk(
-  'products/getPopularProducts',
+  'products/getBestSellerProducts',
   async (params: object) => {
-    const response = await getRequest(params, PRODUCTS_URLS.POPULAR_PRODUCTS);
+    const response = await getRequest(
+      params,
+      PRODUCTS_URLS.BEST_SELLER_PRODUCTS,
+    );
 
     return response.data;
   },

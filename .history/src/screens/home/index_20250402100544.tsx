@@ -14,7 +14,7 @@ const Home: React.FC<Props> = ({navigation, route}) => {
   return (
     <SafeAreaView style={defaultScreenStyles.safeAreaContainer}>
       <View style={defaultScreenStyles.container}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView>
           <Categories />
           <Introduction />
           <BestSeller />
