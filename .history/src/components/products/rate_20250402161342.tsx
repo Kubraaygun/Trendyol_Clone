@@ -8,7 +8,7 @@ type Props = RouteType<'Rate'>;
 const Rate: React.FC<Props> = ({rating}) => {
   const fullStar = Math.floor(rating.rate);
   const halfStar = rating.rate % 1 >= 0.5;
-  console.log(halfStar);
+
   return (
     <View style={styles.container}>
       <Text style={styles.rate}>{rating.rate}</Text>
