@@ -3,7 +3,6 @@ import {ProductsState} from '../../models/data/productsState';
 import {
   getBestSellerProducts,
   getPopularProducts,
-  getProductDetail,
 } from '../actions/productsActions';
 
 const initialState: ProductsState = {
@@ -24,9 +23,6 @@ export const productSlice = createSlice({
       })
       .addCase(getPopularProducts.fulfilled, (state, action) => {
         state.popularProducts = action.payload;
-      })
-      .addCase(getProductDetail.fulfilled, (state, action) => {
-        state.product = action.payload;
       });
   },
 });

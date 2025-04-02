@@ -27,8 +27,7 @@ const getProductDetail = createAsyncThunk(
   'products/getProductDetail',
   async (params: Params) => {
     const productUrl = `${PRODUCTS_URLS.ALL_PRODUCTS}/${params.id}`;
-    console.log(productUrl);
-    const response = await getRequest(params, productUrl);
+    const response = await getRequest(params, PRODUCTS_URLS.POPULAR_PRODUCTS);
 
     return response.data;
   },

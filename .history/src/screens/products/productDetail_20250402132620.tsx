@@ -47,8 +47,6 @@ const ProductDetail: React.FC<Props> = ({route}) => {
 const styles = StyleSheet.create({
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
-    marginVertical: 10,
   },
   description: {
     fontSize: 16,

@@ -36,8 +36,8 @@ const ProductDetail: React.FC<Props> = ({route}) => {
             marginVertical: 20,
           }}
         />
-        <Text style={styles.title}>{product.title}</Text>
-        <Text style={styles.description}>{product.description}</Text>
+        <Text style={{fontSize: 30}}>{product.title}</Text>
+        <Text style={{fontSize: 30}}>{product.description}</Text>
       </ScrollView>
     </View>
   );
@@ -45,13 +45,10 @@ const ProductDetail: React.FC<Props> = ({route}) => {
 
 // define your styles
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginVertical: 10,
-  },
-  description: {
-    fontSize: 16,
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

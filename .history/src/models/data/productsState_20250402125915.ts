@@ -17,7 +17,7 @@ interface ProductsState {
   products: Product[];
   bestSellerProducts: Product[];
   popularProducts: Product[];
-  product: Product;
+  product: object;
 }
 interface Params {
   id: number;

@@ -26,7 +26,7 @@ export const productSlice = createSlice({
         state.popularProducts = action.payload;
       })
       .addCase(getProductDetail.fulfilled, (state, action) => {
-        state.product = action.payload;
+        state.getProductDetail = action.payload;
       });
   },
 });

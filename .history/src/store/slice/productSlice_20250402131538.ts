@@ -10,7 +10,7 @@ const initialState: ProductsState = {
   products: [],
   bestSellerProducts: [],
   popularProducts: [],
-  product: {},
+  product: Product,
 };
 
 export const productSlice = createSlice({
