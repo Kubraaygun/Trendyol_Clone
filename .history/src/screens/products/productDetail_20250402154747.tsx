@@ -16,7 +16,6 @@ import {defaultScreenStyles} from '../../styles/defaultScreenStyle';
 import {height, width} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
 import Button from '../../components/ui/button';
-import Rate from '../../components/products/rate';
 
 type Props = RouteType<'ProductDetail'>;
 // create a component
@@ -34,7 +33,7 @@ const ProductDetail: React.FC<Props> = ({route}) => {
           <Image source={{uri: product.image}} style={styles.image} />
           <Text style={styles.category}>{product.category}</Text>
           <Text style={styles.title}>{product.title}</Text>
-          <Rate rating={product.rating} />
+          <Rate />
           <Text style={styles.description}>{product.description}</Text>
         </ScrollView>
       </View>
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginVertical: 5,
+    marginVertical: 10,
   },
   description: {
     fontSize: 16,
