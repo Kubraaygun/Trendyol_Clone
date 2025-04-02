@@ -29,7 +29,10 @@ const ProductDetail: React.FC<Props> = ({route}) => {
     <View style={defaultScreenStyles.container}>
       <View style={{flex: 1}}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <Image source={{uri: product.image}} style={styles.image} />
+          <Image
+            source={{uri: product.image}}
+            style={styles.image}
+          />
           <Text style={styles.category}>{product.category}</Text>
           <Text style={styles.title}>{product.title}</Text>
           <Text style={styles.description}>{product.description}</Text>
@@ -37,11 +40,7 @@ const ProductDetail: React.FC<Props> = ({route}) => {
       </View>
 
       <View style={styles.priceContainer}>
-        <View style={{flex: 1, justifyContent: 'center', paddingLeft: 15}}>
-          <Text style={styles.price}>{product.price} TL</Text>
-          <Text style={styles.info}>Kargo Bedava</Text>
-        </View>
-        <View style={{flex: 2}}></View>
+        <Text style={styles.category}>{product.price}</Text>
       </View>
     </View>
   );
@@ -68,24 +67,13 @@ const styles = StyleSheet.create({
     height: height * 0.1,
     borderTopWidth: 0.5,
     borderColor: Colors.GRAY,
-    flexDirection: 'row',
   },
-  price: {
-    fontSize: 18,
-    color: Colors.PRIMARY,
-    fontWeight: '600',
-  },
-  image: {
+  image:{{
     width: width,
     height: height * 0.3,
     resizeMode: 'contain',
     marginVertical: 20,
-  },
-  info: {
-    fontSize: 14,
-    color: Colors.GREEN,
-    fontWeight: '600',
-  },
+  }}
 });
 
 //make this component available to the app

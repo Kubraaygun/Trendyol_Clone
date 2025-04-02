@@ -37,11 +37,13 @@ const ProductDetail: React.FC<Props> = ({route}) => {
       </View>
 
       <View style={styles.priceContainer}>
-        <View style={{flex: 1, justifyContent: 'center', paddingLeft: 15}}>
-          <Text style={styles.price}>{product.price} TL</Text>
-          <Text style={styles.info}>Kargo Bedava</Text>
+        <View style={{flex: 1, justifyContent: 'center'}}>
+          <Text style={styles.category}>{product.price}</Text>
+          <Text style={styles.category}>Kargo Bedava</Text>
         </View>
-        <View style={{flex: 2}}></View>
+        <View style={{flex: 3}}>
+          <Text style={styles.category}>{product.price}</Text>
+        </View>
       </View>
     </View>
   );
@@ -70,21 +72,11 @@ const styles = StyleSheet.create({
     borderColor: Colors.GRAY,
     flexDirection: 'row',
   },
-  price: {
-    fontSize: 18,
-    color: Colors.PRIMARY,
-    fontWeight: '600',
-  },
   image: {
     width: width,
     height: height * 0.3,
     resizeMode: 'contain',
     marginVertical: 20,
-  },
-  info: {
-    fontSize: 14,
-    color: Colors.GREEN,
-    fontWeight: '600',
   },
 });
 

@@ -70,11 +70,13 @@ const styles = StyleSheet.create({
     borderColor: Colors.GRAY,
     flexDirection: 'row',
   },
-  price: {
+  price:{
     fontSize: 18,
     color: Colors.PRIMARY,
+    marginVertical: 10,
     fontWeight: '600',
-  },
+    textDecorationLine: 'underline',
+  }
   image: {
     width: width,
     height: height * 0.3,
@@ -83,7 +85,8 @@ const styles = StyleSheet.create({
   },
   info: {
     fontSize: 14,
-    color: Colors.GREEN,
+    color: Colors.PRIMARY,
+
     fontWeight: '600',
   },
 });

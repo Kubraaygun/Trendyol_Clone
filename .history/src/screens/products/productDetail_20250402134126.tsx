@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 18,
     color: Colors.PRIMARY,
+
     fontWeight: '600',
   },
   image: {

@@ -70,11 +70,6 @@ const styles = StyleSheet.create({
     borderColor: Colors.GRAY,
     flexDirection: 'row',
   },
-  price: {
-    fontSize: 18,
-    color: Colors.PRIMARY,
-    fontWeight: '600',
-  },
   image: {
     width: width,
     height: height * 0.3,
@@ -83,7 +78,8 @@ const styles = StyleSheet.create({
   },
   info: {
     fontSize: 14,
-    color: Colors.GREEN,
+    color: Colors.PRIMARY,
+
     fontWeight: '600',
   },
 });
