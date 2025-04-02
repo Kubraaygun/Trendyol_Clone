@@ -19,7 +19,6 @@ interface ProductsState {
   popularProducts: Product[];
   product: Product;
   pending: boolean;
-  error: any;
 }
 interface Params {
   id: number;

@@ -13,7 +13,6 @@ const initialState: ProductsState = {
   popularProducts: [],
   product: {},
   pending: false,
-  error: null,
 };
 
 export const productSlice = createSlice({
@@ -30,8 +29,7 @@ export const productSlice = createSlice({
         state.pending = false;
       })
       .addCase(getAllProducts.rejected, (state, action) => {
-        state.pending = false;
-        state.error = action.error;
+        state.products = action.payload;
       })
 
       .addCase(getBestSellerProducts.fulfilled, (state, action) => {

@@ -31,7 +31,6 @@ export const productSlice = createSlice({
       })
       .addCase(getAllProducts.rejected, (state, action) => {
         state.pending = false;
-        state.error = action.error;
       })
 
       .addCase(getBestSellerProducts.fulfilled, (state, action) => {
