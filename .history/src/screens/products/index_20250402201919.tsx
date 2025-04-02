@@ -22,7 +22,7 @@ const ProductList: React.FC<Props> = () => {
     <View style={defaultScreenStyles.container}>
       <Categories />
       {pending ? (
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <View style={{flex: 1}}>
           <ActivityIndicator size={'large'} color={Colors.PRIMARY} />
         </View>
       ) : (

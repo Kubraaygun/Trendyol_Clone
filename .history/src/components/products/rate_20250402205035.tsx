@@ -16,9 +16,7 @@ const Rate: React.FC<RatingProps> = ({rating, size}) => {
           flexDirection: 'row',
           alignItems: 'center',
         }}>
-        <Text style={[styles.rate, {fontSize: size == 'large' ? 18 : 14}]}>
-          {rating.rate}
-        </Text>
+        <Text style={styles.rate}>{rating.rate}</Text>
         {Array(fullStar)
           .fill(null)
           .map((item, index) => (
@@ -29,20 +27,12 @@ const Rate: React.FC<RatingProps> = ({rating, size}) => {
               color={Colors.PRIMARY}
             />
           ))}
-        {halfStar && (
-          <Icon
-            name="star-half"
-            size={size == 'small' ? 15 : 20}
-            color={Colors.PRIMARY}
-          />
-        )}
+        {halfStar && <Icon name="star-half" size={20} color={Colors.PRIMARY} />}
       </View>
 
-      {size == 'large' && (
-        <View style={{justifyContent: 'center'}}>
-          <Text style={styles.rate}> | {rating.count} Değerlendirme</Text>
-        </View>
-      )}
+      <View style={{justifyContent: 'center'}}>
+        <Text style={styles.rate}> | {rating.count} Değerlendirme</Text>
+      </View>
     </View>
   );
 };
@@ -56,8 +46,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   rate: {
+    fontSize: 18,
     fontWeight: 'bold',
-    marginRight: 4,
+    marginRight: 5,
   },
 });
 

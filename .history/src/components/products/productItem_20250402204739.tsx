@@ -36,10 +36,10 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
       </Text>
       <Text
         numberOfLines={2}
-        style={{fontSize: 14, color: Colors.GREEN, marginVertical: 5}}>
+        style={{fontSize: 14, color: Colors.GRAY, marginVertical: 5}}>
         {product.category}
       </Text>
-      {product.rating && <Rate size="small" rating={product?.rating} />}
+      {product.rating && <Rate rating={product?.rating} />}
       <Text
         numberOfLines={2}
         style={{

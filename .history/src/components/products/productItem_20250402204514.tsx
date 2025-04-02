@@ -7,7 +7,6 @@ import {Colors} from '../../theme/colors';
 import {useNavigation} from '@react-navigation/native';
 import {PRODUCTSNAVIGATOR} from '../../utils/routes';
 import FavoritesButton from '../favorites/favoritesButton';
-import Rate from './rate';
 // create a component
 const ProductItem: React.FC<ProductItemProps> = ({product}) => {
   const navigation = useNavigation();
@@ -36,10 +35,9 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
       </Text>
       <Text
         numberOfLines={2}
-        style={{fontSize: 14, color: Colors.GREEN, marginVertical: 5}}>
+        style={{fontSize: 14, color: Colors.GRAY, marginVertical: 5}}>
         {product.category}
       </Text>
-      {product.rating && <Rate size="small" rating={product?.rating} />}
       <Text
         numberOfLines={2}
         style={{

@@ -25,12 +25,12 @@ const ProductDetail: React.FC<Props> = ({route}) => {
     <View style={defaultScreenStyles.container}>
       <View style={{flex: 1}}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <FavoritesButton product={product} />
+          <FavoritesButton />
           <Image source={{uri: product?.image}} style={styles.image} />
           <Text style={styles.category}>{product?.category}</Text>
           <Text style={styles.title}>{product?.title}</Text>
 
-          {product.rating && <Rate size="large" rating={product?.rating} />}
+          {product.rating && <Rate rating={product?.rating} />}
           <Text style={styles.description}>{product?.description}</Text>
         </ScrollView>
       </View>

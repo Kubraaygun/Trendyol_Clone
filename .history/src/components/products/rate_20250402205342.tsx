@@ -16,9 +16,7 @@ const Rate: React.FC<RatingProps> = ({rating, size}) => {
           flexDirection: 'row',
           alignItems: 'center',
         }}>
-        <Text style={[styles.rate, {fontSize: size == 'large' ? 18 : 14}]}>
-          {rating.rate}
-        </Text>
+        <Text style={styles.rate}>{rating.rate}</Text>
         {Array(fullStar)
           .fill(null)
           .map((item, index) => (
