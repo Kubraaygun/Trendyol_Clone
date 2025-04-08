@@ -4,11 +4,11 @@ import {View, Text, StyleSheet} from 'react-native';
 import Icon from '@react-native-vector-icons/ionicons';
 import {Colors} from '../../theme/colors';
 
-const FreeCargo: React.FC = () => {
+const FreeCargo: React.FC<Props> = () => {
   return (
     <View style={styles.container}>
-      <Icon name="cube-sharp" color={Colors.GRAY} size={18} />
-      <Text style={styles.text}> Kargo Bedava</Text>
+      <Icon name="cube-sharp" color={Colors.GRAY} size={20} />
+      <Text style={styles.text}>Ücretsiz Kargo</Text>
     </View>
   );
 };
@@ -19,13 +19,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#f0f8ff',
-    marginVertical: 10,
-    width: '25%',
-    paddingVertical: 5,
-    borderRadius: 5,
+    width: '20%',
   },
   text: {
-    fontSize: 8,
+    fontSize: 12,
 
     marginTop: 5,
   },

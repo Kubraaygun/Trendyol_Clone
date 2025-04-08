@@ -52,7 +52,7 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
         }}>
         {product.price} TL
       </Text>
-      <View style={{flexDirection: 'row'}}>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
         <FreeCargo />
         <Discount />
       </View>

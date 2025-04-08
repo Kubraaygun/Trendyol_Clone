@@ -1,6 +1,6 @@
 //import liraries
 import React from 'react';
-import {Text, StyleSheet, Image, Pressable, View} from 'react-native';
+import {Text, StyleSheet, Image, Pressable} from 'react-native';
 import {ProductItemProps} from '../../models/ui/productItemProps';
 import {width, height} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
@@ -52,10 +52,8 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
         }}>
         {product.price} TL
       </Text>
-      <View style={{flexDirection: 'row'}}>
-        <FreeCargo />
-        <Discount />
-      </View>
+      <FreeCargo />
+      <Discount />
     </Pressable>
   );
 };

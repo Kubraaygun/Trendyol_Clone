@@ -4,7 +4,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import Icon from '@react-native-vector-icons/ionicons';
 import {Colors} from '../../theme/colors';
 
-const FreeCargo: React.FC = () => {
+const Discount: React.FC = () => {
   return (
     <View style={styles.container}>
       <Icon name="cube-sharp" color={Colors.GRAY} size={18} />
@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#f0f8ff',
-    marginVertical: 10,
     width: '25%',
     paddingVertical: 5,
     borderRadius: 5,
@@ -32,4 +31,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default FreeCargo;
+export default Discount;
