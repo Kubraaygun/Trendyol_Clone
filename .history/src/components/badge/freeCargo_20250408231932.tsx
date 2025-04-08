@@ -8,7 +8,6 @@ const FreeCargo: React.FC<Props> = () => {
   return (
     <View style={styles.container}>
       <Icon name="cube-sharp" color={Colors.GRAY} size={20} />
-      <Text style={styles.text}>Ücretsiz Kargo</Text>
     </View>
   );
 };
@@ -19,11 +18,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  text: {
-    fontSize: 12,
-    color: Colors.GRAY,
-    marginLeft: 5,
+    backgroundColor: '#2c3e50',
   },
 });
 

@@ -1,14 +1,19 @@
 //import liraries
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import Icon from '@react-native-vector-icons/ionicons';
-import {Colors} from '../../theme/colors';
+import Icon from '@react-native-vector-icons/ionicons";
+import { Colors } from '../../theme/colors';
+
+
 
 const FreeCargo: React.FC<Props> = () => {
   return (
     <View style={styles.container}>
-      <Icon name="cube-sharp" color={Colors.GRAY} size={20} />
-      <Text style={styles.text}>Ücretsiz Kargo</Text>
+    <Icon
+    name='cube-sharp'
+    color={Colors.GRAY}
+    size
+    />
     </View>
   );
 };
@@ -19,11 +24,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  text: {
-    fontSize: 12,
-    color: Colors.GRAY,
-    marginLeft: 5,
+    backgroundColor: '#2c3e50',
   },
 });
 

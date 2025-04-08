@@ -8,7 +8,6 @@ const FreeCargo: React.FC<Props> = () => {
   return (
     <View style={styles.container}>
       <Icon name="cube-sharp" color={Colors.GRAY} size={20} />
-      <Text style={styles.text}>Ücretsiz Kargo</Text>
     </View>
   );
 };
