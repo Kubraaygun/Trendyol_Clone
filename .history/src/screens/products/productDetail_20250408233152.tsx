@@ -11,9 +11,6 @@ import {Colors} from '../../theme/colors';
 import Button from '../../components/ui/button';
 import Rate from '../../components/products/rate';
 import FavoritesButton from '../../components/favorites/favoritesButton';
-import FreeCargo from '../../components/badge/freeCargo';
-import Discount from '../../components/badge/discount';
-import Delivery from '../../components/badge/delivery';
 
 type Props = RouteType<'ProductDetail'>;
 // create a component
