@@ -8,7 +8,7 @@ import {width} from '../../utils/constants';
 const Discount: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Icon name="pricetag" color={Colors.PRIMARY} size={18} />
+      <Icon name="cube-sharp" color={Colors.PRIMARY} size={18} />
       <Text style={styles.text}>2. Ürün İndirim</Text>
     </View>
   );
