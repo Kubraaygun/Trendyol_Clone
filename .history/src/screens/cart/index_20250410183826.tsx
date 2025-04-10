@@ -6,15 +6,14 @@ import CartItem from '../../components/cart/cartItem';
 
 const Cart: React.FC = () => {
   const {cart} = useSelector((state: RootState) => state.cart);
-  console.log('sepetteki urunler', cart);
   return (
     <SafeAreaView style={styles.container}>
-      <FlatList data={cart} renderItem={item => <CartItem item={item} />} />
+      <FlatList data={cart} />
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
   },
