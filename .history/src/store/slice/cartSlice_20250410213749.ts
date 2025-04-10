@@ -46,10 +46,6 @@ export const cartSlice = createSlice({
     removeFromCart: (state, actiom) => {
       const productId = action.payload;
       state.cart = state.cart.filter(item => item.id !== productId);
-      state.totalPrice = state.cart.reduce(
-        (sum, item) => sum + item.price * item.quantity,
-        0,
-      );
     },
   },
 });
