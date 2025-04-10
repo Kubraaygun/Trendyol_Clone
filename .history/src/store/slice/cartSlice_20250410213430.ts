@@ -37,11 +37,11 @@ export const cartSlice = createSlice({
       const item = state.cart.find(item => item.id === id);
 
       if (item && item.quantity > 0) item.quantity -= 1;
-      if (item.quantity === 0) state.cart = [];
-      state.totalPrice = state.cart.reduce(
-        (sum, item) => sum + item.price * item.quantity,
-        0,
-      );
+      if (item.quantity === 0)
+        state.cart.state.totalPrice = state.cart.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0,
+        );
     },
   },
 });

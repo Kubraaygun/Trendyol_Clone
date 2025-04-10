@@ -38,7 +38,7 @@ export const cartSlice = createSlice({
 
       if (item && item.quantity > 0) item.quantity -= 1;
       if (item.quantity === 0) state.cart = [];
-      state.totalPrice = state.cart.reduce(
+      state.cart.state.totalPrice = state.cart.reduce(
         (sum, item) => sum + item.price * item.quantity,
         0,
       );
