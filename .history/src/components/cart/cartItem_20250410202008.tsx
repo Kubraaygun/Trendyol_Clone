@@ -4,15 +4,12 @@ import {View, Text, StyleSheet, Pressable, Image} from 'react-native';
 import {CartItemProps} from '../../models/ui/cartItemProps';
 import {height, width} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
-import Delivery from '../badge/delivery';
-import FreeCargo from '../badge/freeCargo';
-import Discount from '../badge/discount';
 
 // create a component
 const CartItem: React.FC<CartItemProps> = ({product}) => {
   return (
     <Pressable style={styles.container}>
-      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <View>
         <Image source={{uri: product.image}} style={styles.image} />
       </View>
 
@@ -20,17 +17,12 @@ const CartItem: React.FC<CartItemProps> = ({product}) => {
         <View>
           <Text style={styles.title}>{product?.title} </Text>
         </View>
-        <View style={{flexDirection: 'row', marginVertical: 10}}>
-          <Delivery />
-          <FreeCargo />
-          <Discount />
-        </View>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View>
             <Text style={styles.quantity}>1</Text>
           </View>
           <View>
-            <Text style={styles.price}>{product?.price} TL</Text>
+            <Text style={styles.price}>{product?.price} </Text>
           </View>
         </View>
       </View>
@@ -69,6 +61,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: '600',
+    marginVertical: 5,
+    color: Colors.PRIMARY,
   },
 });
 

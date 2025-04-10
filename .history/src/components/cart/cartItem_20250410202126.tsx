@@ -12,7 +12,7 @@ import Discount from '../badge/discount';
 const CartItem: React.FC<CartItemProps> = ({product}) => {
   return (
     <Pressable style={styles.container}>
-      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <View>
         <Image source={{uri: product.image}} style={styles.image} />
       </View>
 
@@ -20,7 +20,7 @@ const CartItem: React.FC<CartItemProps> = ({product}) => {
         <View>
           <Text style={styles.title}>{product?.title} </Text>
         </View>
-        <View style={{flexDirection: 'row', marginVertical: 10}}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Delivery />
           <FreeCargo />
           <Discount />

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SafeAreaView, Text, FlatList, StyleSheet, View} from 'react-native';
+import {SafeAreaView, Text, FlatList, StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../store';
 import CartItem from '../../components/cart/cartItem';

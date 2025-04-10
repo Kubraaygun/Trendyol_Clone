@@ -12,7 +12,7 @@ import Discount from '../badge/discount';
 const CartItem: React.FC<CartItemProps> = ({product}) => {
   return (
     <Pressable style={styles.container}>
-      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <View>
         <Image source={{uri: product.image}} style={styles.image} />
       </View>
 

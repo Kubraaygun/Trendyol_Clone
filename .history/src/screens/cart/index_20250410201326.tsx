@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SafeAreaView, Text, FlatList, StyleSheet, View} from 'react-native';
+import {SafeAreaView, Text, FlatList, StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../store';
 import CartItem from '../../components/cart/cartItem';
@@ -9,8 +9,8 @@ const Cart: React.FC = () => {
   const {cart} = useSelector((state: RootState) => state.cart);
   console.log('sepetteki urunler', cart);
   return (
-    <SafeAreaView style={defaultScreenStyles.safeAreaContainer}>
-      <View style={defaultScreenStyles.container}>
+    <SafeAreaView style={defaultScreenStyles.container}>
+      <View>
         <FlatList
           data={cart}
           renderItem={({item}) => <CartItem product={item} />}
