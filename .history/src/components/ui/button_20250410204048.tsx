@@ -3,14 +3,13 @@ import React from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {Colors} from '../../theme/colors';
 import {height} from '../../utils/constants';
-import {ButtonProps} from '../../models/ui/buttonProps';
 
 // create a component
-const Button: React.FC<ButtonProps> = props => {
+const Button: React.FC<Props> = props => {
   const {title} = props;
   return (
     <TouchableOpacity {...props} style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>Sepete Ekle</Text>
     </TouchableOpacity>
   );
 };
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.PRIMARY,
-    minHeight: height * 0.047,
+    minHeight: height * 0.05,
     borderRadius: 5,
   },
   title: {

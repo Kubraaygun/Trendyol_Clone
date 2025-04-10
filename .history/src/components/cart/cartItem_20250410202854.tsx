@@ -13,7 +13,6 @@ import {PRODUCTSNAVIGATOR} from '../../utils/routes';
 // create a component
 const CartItem: React.FC<CartItemProps> = ({product}) => {
   const navigation = useNavigation();
-
   return (
     <Pressable
       onPress={() =>

@@ -3,7 +3,6 @@ import {CartState} from '../../models/data/cartState';
 
 const initialState: CartState = {
   cart: [],
-  totalPrice: 0,
 };
 export const cartSlice = createSlice({
   name: 'categories',
@@ -17,10 +16,6 @@ export const cartSlice = createSlice({
       } else {
         state.cart.push({...product, quantity: 1});
       }
-      state.totalPrice = state.cart.reduce(
-        (sum, item) => sum + item.price * item.quantity,
-        0,
-      );
     },
   },
 });

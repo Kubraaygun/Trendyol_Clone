@@ -23,21 +23,19 @@ const Cart: React.FC = () => {
           data={cart}
           renderItem={({item}) => <CartItem product={item} />}
         />
-        {cart?.length == 0 ? null : (
-          <View style={styles.priceContainer}>
-            <View style={{flex: 1, justifyContent: 'center', paddingLeft: 15}}>
-              <Text style={styles.total}>Toplam</Text>
-              <Text style={styles.price}>{totalPrice} TL</Text>
-              <Text style={styles.info}>Kargo Bedava</Text>
-            </View>
-            <View style={{flex: 2, justifyContent: 'center'}}>
-              <Button
-                title="Sepeti Onayla"
-                onPress={() => dispatch(addCart(product))}
-              />
-            </View>
+        <View style={styles.priceContainer}>
+          <View style={{flex: 1, justifyContent: 'center', paddingLeft: 15}}>
+            <Text style={styles.total}>Toplam</Text>
+            <Text style={styles.price}>{totalPrice} TL</Text>
+            <Text style={styles.info}>Kargo Bedava</Text>
           </View>
-        )}
+          <View style={{flex: 2, justifyContent: 'center'}}>
+            <Button
+              title="Sepeti Onayla"
+              onPress={() => dispatch(addCart(product))}
+            />
+          </View>
+        </View>
       </View>
     </SafeAreaView>
   );

@@ -51,7 +51,7 @@ const ProductDetail: React.FC<Props> = ({route}) => {
         </View>
         <View style={{flex: 2, justifyContent: 'center'}}>
           <Button
-            title="Sepete Ekle"
+            title="Sepete Ekle",
             onPress={() => dispatch(addCart(product))}
           />
         </View>

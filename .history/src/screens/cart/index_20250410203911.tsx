@@ -9,35 +9,24 @@ import {height} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
 
 const Cart: React.FC = () => {
-  const {cart, totalPrice} = useSelector((state: RootState) => state.cart);
-
+  const {cart} = useSelector((state: RootState) => state.cart);
+  console.log('sepetteki urunler', cart);
   return (
     <SafeAreaView style={defaultScreenStyles.safeAreaContainer}>
       <View style={defaultScreenStyles.container}>
         <FlatList
-          ListEmptyComponent={
-            <Text style={{fontSize: 18, textAlign: 'center'}}>
-              Henuz Sepete Urun Eklemediniz !
-            </Text>
-          }
           data={cart}
           renderItem={({item}) => <CartItem product={item} />}
         />
-        {cart?.length == 0 ? null : (
-          <View style={styles.priceContainer}>
-            <View style={{flex: 1, justifyContent: 'center', paddingLeft: 15}}>
-              <Text style={styles.total}>Toplam</Text>
-              <Text style={styles.price}>{totalPrice} TL</Text>
-              <Text style={styles.info}>Kargo Bedava</Text>
-            </View>
-            <View style={{flex: 2, justifyContent: 'center'}}>
-              <Button
-                title="Sepeti Onayla"
-                onPress={() => dispatch(addCart(product))}
-              />
-            </View>
+        <View style={styles.priceContainer}>
+          <View style={{flex: 1, justifyContent: 'center', paddingLeft: 15}}>
+            <Text style={styles.price}>0 TL</Text>
+            <Text style={styles.info}>Kargo Bedava</Text>
           </View>
-        )}
+          <View style={{flex: 2, justifyContent: 'center'}}>
+            <Button onPress={() => dispatch(addCart(product))} />
+          </View>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -47,25 +36,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  total: {
-    fontSize: 14,
-    marginBottom: 5,
-    fontWeight: '300',
-  },
   priceContainer: {
-    height: height * 0.08,
+    height: height * 0.1,
     borderTopWidth: 0.5,
     borderColor: Colors.GRAY,
     flexDirection: 'row',
   },
   price: {
-    fontSize: 16,
-    color: Colors.BLACK,
-    fontWeight: 'bold',
+    fontSize: 18,
+    color: Colors.PRIMARY,
+    fontWeight: '600',
   },
 
   info: {
-    fontSize: 10,
+    fontSize: 14,
     color: Colors.GREEN,
     fontWeight: '600',
   },
