@@ -8,7 +8,6 @@ import Delivery from '../badge/delivery';
 import FreeCargo from '../badge/freeCargo';
 import Discount from '../badge/discount';
 import {useNavigation} from '@react-navigation/native';
-import {PRODUCTSNAVIGATOR} from '../../utils/routes';
 
 // create a component
 const CartItem: React.FC<CartItemProps> = ({product}) => {
