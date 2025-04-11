@@ -17,13 +17,11 @@ import Discount from '../badge/discount';
 import {useNavigation} from '@react-navigation/native';
 import {PRODUCTSNAVIGATOR} from '../../utils/routes';
 import Counter from './counter';
-import Icon from '@react-native-vector-icons/ionicons';
-import {useDispatch} from 'react-redux';
-import {removeFromCart} from '../../store/slice/cartSlice';
+
 // create a component
 const CartItem: React.FC<CartItemProps> = ({product}) => {
   const navigation = useNavigation();
-  const dispach = useDispatch();
+
   return (
     <Pressable
       onPress={() =>
@@ -51,12 +49,10 @@ const CartItem: React.FC<CartItemProps> = ({product}) => {
             <Text style={styles.price}>{product?.price} TL</Text>
           </View>
         </View>
-        <TouchableOpacity
-          onPress={() => dispach(removeFromCart(product.id))}
-          style={{alignSelf: 'flex-end', marginVertical: 5}}>
-          <Icon size={25} name="trash" color={Colors.PRIMARY} />
-        </TouchableOpacity>
       </View>
+      <TouchableOpacity>
+        <Text>Sil</Text>
+      </TouchableOpacity>
     </Pressable>
   );
 };

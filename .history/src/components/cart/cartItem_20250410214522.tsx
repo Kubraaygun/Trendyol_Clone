@@ -52,7 +52,7 @@ const CartItem: React.FC<CartItemProps> = ({product}) => {
           </View>
         </View>
         <TouchableOpacity
-          onPress={() => dispach(removeFromCart(product.id))}
+          onPress={() => removeFromCart(product.id)}
           style={{alignSelf: 'flex-end', marginVertical: 5}}>
           <Icon size={25} name="trash" color={Colors.PRIMARY} />
         </TouchableOpacity>
