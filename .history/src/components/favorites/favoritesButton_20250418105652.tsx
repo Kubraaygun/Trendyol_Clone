@@ -18,11 +18,11 @@ const FavoritesButton: React.FC<ProductItemProps> = ({product}) => {
         'Lütfen favorilere eklemeden önce giriş yapınız',
         [
           {
-            text: 'İptal',
+            text: 'Cancel',
             onPress: () => console.log('Cancel'),
             style: 'cancel',
           },
-          {text: 'Giriş Yap', onPress: () => console.log('OK')},
+          {text: 'OK', onPress: () => console.log('OK')},
         ],
       );
     }

@@ -21,14 +21,18 @@ const Cart: React.FC = () => {
 
   const checkLogin = () => {
     if (!isLogin) {
-      Alert.alert('Giriş Yap', 'Lütfen sepeti onaylamadan önce giriş yapınız', [
-        {
-          text: 'İptal',
-          onPress: () => console.log('Cancel'),
-          style: 'cancel',
-        },
-        {text: 'Giriş Yap', onPress: () => console.log('OK')},
-      ]);
+      Alert.alert(
+        'Giriş Yap',
+        'Lütfen favorilere eklemeden önce giriş yapınız',
+        [
+          {
+            text: 'İptal',
+            onPress: () => console.log('Cancel'),
+            style: 'cancel',
+          },
+          {text: 'Giriş Yap', onPress: () => console.log('OK')},
+        ],
+      );
     }
   };
 

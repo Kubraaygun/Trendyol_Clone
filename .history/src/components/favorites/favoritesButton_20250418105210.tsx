@@ -1,6 +1,6 @@
 //import liraries
 import React, {Component} from 'react';
-import {Alert, StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from '@react-native-vector-icons/ionicons';
 import {Colors} from '../../theme/colors';
 import {width} from '../../utils/constants';
@@ -9,27 +9,9 @@ import {RootState} from '../../store';
 import {useSelector} from 'react-redux';
 // create a component
 const FavoritesButton: React.FC<ProductItemProps> = ({product}) => {
-  const {isLogin} = useSelector((state: RootState) => state.auth);
-
-  const checkLogin = () => {
-    if (!isLogin) {
-      Alert.alert(
-        'Giriş Yap',
-        'Lütfen favorilere eklemeden önce giriş yapınız',
-        [
-          {
-            text: 'İptal',
-            onPress: () => console.log('Cancel'),
-            style: 'cancel',
-          },
-          {text: 'Giriş Yap', onPress: () => console.log('OK')},
-        ],
-      );
-    }
-  };
-
+  const {} = useSelector((state: RootState) => state);
   return (
-    <TouchableOpacity style={styles.container} onPress={checkLogin}>
+    <TouchableOpacity style={styles.container}>
       <Icon
         name={product.isFavorite ? 'heart' : 'heart-outline'}
         size={20}

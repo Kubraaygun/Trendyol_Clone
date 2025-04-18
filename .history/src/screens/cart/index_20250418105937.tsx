@@ -21,14 +21,18 @@ const Cart: React.FC = () => {
 
   const checkLogin = () => {
     if (!isLogin) {
-      Alert.alert('Giriş Yap', 'Lütfen sepeti onaylamadan önce giriş yapınız', [
-        {
-          text: 'İptal',
-          onPress: () => console.log('Cancel'),
-          style: 'cancel',
-        },
-        {text: 'Giriş Yap', onPress: () => console.log('OK')},
-      ]);
+      Alert.alert(
+        'Giriş Yap',
+        'Lütfen favorilere eklemeden önce giriş yapınız',
+        [
+          {
+            text: 'İptal',
+            onPress: () => console.log('Cancel'),
+            style: 'cancel',
+          },
+          {text: 'Giriş Yap', onPress: () => console.log('OK')},
+        ],
+      );
     }
   };
 
@@ -52,7 +56,10 @@ const Cart: React.FC = () => {
               <Text style={styles.info}>Kargo Bedava</Text>
             </View>
             <View style={{flex: 2, justifyContent: 'center'}}>
-              <Button title="Sepeti Onayla" onPress={() => checkLogin()} />
+              <Button
+                title="Sepeti Onayla"
+                onPress={() => dispatch(addCart(product))}
+              />
             </View>
           </View>
         )}
