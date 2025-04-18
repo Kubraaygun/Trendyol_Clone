@@ -7,11 +7,8 @@ import {width} from '../../utils/constants';
 import {ProductItemProps} from '../../models/ui/productItemProps';
 import {RootState} from '../../store';
 import {useSelector} from 'react-redux';
-import {AUTHNAVIGATOR} from '../../utils/routes';
-import {useNavigation} from '@react-navigation/native';
 // create a component
 const FavoritesButton: React.FC<ProductItemProps> = ({product}) => {
-  const navigation = useNavigation();
   const {isLogin} = useSelector((state: RootState) => state.auth);
 
   const checkLogin = () => {
@@ -25,10 +22,7 @@ const FavoritesButton: React.FC<ProductItemProps> = ({product}) => {
             onPress: () => console.log('Cancel'),
             style: 'cancel',
           },
-          {
-            text: 'Giriş Yap',
-            onPress: () => navigation.navigate(AUTHNAVIGATOR.LOGIN),
-          },
+          {text: 'Giriş Yap', onPress: () =>           onPress: () => navigation.navigate(AUTHNAVIGATOR.LOGIN),},
         ],
       );
     }

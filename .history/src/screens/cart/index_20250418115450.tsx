@@ -15,7 +15,6 @@ import Button from '../../components/ui/button';
 import {height} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
 import {useNavigation} from '@react-navigation/native';
-import {AUTHNAVIGATOR} from '../../utils/routes';
 
 const Cart: React.FC = () => {
   const navigation = useNavigation();
@@ -30,10 +29,7 @@ const Cart: React.FC = () => {
           onPress: () => console.log('Cancel'),
           style: 'cancel',
         },
-        {
-          text: 'Giriş Yap',
-          onPress: () => navigation.navigate(AUTHNAVIGATOR.LOGIN),
-        },
+        {text: 'Giriş Yap', onPress: () => console.log('OK')},
       ]);
     }
   };
