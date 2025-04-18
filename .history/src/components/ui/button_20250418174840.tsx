@@ -11,7 +11,6 @@ const Button: React.FC<ButtonProps> = props => {
   return (
     <TouchableOpacity
       {...props}
-      onPressIn={onPress}
       style={[
         styles.container,
         {backgroundColor: disabled ? Colors.GRAY : Colors.PRIMARY},
