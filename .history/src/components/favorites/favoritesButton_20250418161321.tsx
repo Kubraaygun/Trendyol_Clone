@@ -5,18 +5,17 @@ import Icon from '@react-native-vector-icons/ionicons';
 import {Colors} from '../../theme/colors';
 import {width} from '../../utils/constants';
 import {ProductItemProps} from '../../models/ui/productItemProps';
-import {AppDispatch, RootState} from '../../store';
+import {RootState} from '../../store';
 import {useDispatch, useSelector} from 'react-redux';
 import {AUTHNAVIGATOR} from '../../utils/routes';
 import {useNavigation} from '@react-navigation/native';
 import {addFavorite} from '../../store/slice/favoriteSlice';
-import {addFavoriteOther} from '../../store/slice/productSlice';
 // create a component
 const FavoritesButton: React.FC<ProductItemProps> = ({product}) => {
   const navigation = useNavigation();
   const {isLogin} = useSelector((state: RootState) => state.auth);
 
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
 
   const checkLogin = () => {
     if (!isLogin) {
@@ -37,7 +36,6 @@ const FavoritesButton: React.FC<ProductItemProps> = ({product}) => {
       );
     } else {
       dispatch(addFavorite(product));
-      dispatch(addFavoriteOther(product));
     }
   };
 

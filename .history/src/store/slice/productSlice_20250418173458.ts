@@ -28,12 +28,6 @@ export const productSlice = createSlice({
       const existingProductBestPopular = state.popularProducts.find(
         item => item.id === product.id,
       );
-      const existingAllProduct = state.products.find(
-        item => item.id === product.id,
-      );
-      if (existingAllProduct) {
-        existingAllProduct.isFavorite = !existingAllProduct.isFavorite;
-      }
       if (existingProductBestSeller) {
         existingProductBestSeller.isFavorite =
           !existingProductBestSeller.isFavorite;

@@ -22,28 +22,13 @@ export const productSlice = createSlice({
   reducers: {
     addFavoriteOther: (state, action) => {
       const product = action.payload;
-      const existingProductBestSeller = state.bestSellerProducts.find(
+      const existingProduct = state.bestSellerProducts.find(
         item => item.id === product.id,
       );
-      const existingProductBestPopular = state.popularProducts.find(
-        item => item.id === product.id,
-      );
-      const existingAllProduct = state.products.find(
-        item => item.id === product.id,
-      );
-      if (existingAllProduct) {
-        existingAllProduct.isFavorite = !existingAllProduct.isFavorite;
-      }
-      if (existingProductBestSeller) {
-        existingProductBestSeller.isFavorite =
-          !existingProductBestSeller.isFavorite;
-      }
-      if (existingProductBestPopular) {
-        existingProductBestPopular.isFavorite =
-          !existingProductBestPopular.isFavorite;
-      }
-      if (product.id === state.product.id) {
-        state.product.isFavorite = !state.product.isFavorite;
+      if (existingProduct) {
+        existingProduct.isFavorite = false;
+      } else {
+        existingProduct.isFavorite = true;
       }
     },
   },
@@ -72,5 +57,5 @@ export const productSlice = createSlice({
       });
   },
 });
-export const {addFavoriteOther} = productSlice.actions;
+export const {addFavaddFavoriteOtherorite} = productSlice.actions;
 export default productSlice.reducer;

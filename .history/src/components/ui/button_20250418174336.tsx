@@ -7,14 +7,9 @@ import {ButtonProps} from '../../models/ui/buttonProps';
 
 // create a component
 const Button: React.FC<ButtonProps> = props => {
-  const {title, disabled} = props;
+  const {title} = props;
   return (
-    <TouchableOpacity
-      {...props}
-      style={[
-        styles.container,
-        {backgroundColor: disabled ? Colors.GRAY : Colors.PRIMARY},
-      ]}>
+    <TouchableOpacity disabled {...props} style={styles.container}>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );

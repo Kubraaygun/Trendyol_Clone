@@ -25,15 +25,9 @@ export const productSlice = createSlice({
       const existingProductBestSeller = state.bestSellerProducts.find(
         item => item.id === product.id,
       );
-      const existingProductBestPopular = state.popularProducts.find(
+      const existingProductBestPopular = state.bestSellerProducts.find(
         item => item.id === product.id,
       );
-      const existingAllProduct = state.products.find(
-        item => item.id === product.id,
-      );
-      if (existingAllProduct) {
-        existingAllProduct.isFavorite = !existingAllProduct.isFavorite;
-      }
       if (existingProductBestSeller) {
         existingProductBestSeller.isFavorite =
           !existingProductBestSeller.isFavorite;
@@ -41,9 +35,6 @@ export const productSlice = createSlice({
       if (existingProductBestPopular) {
         existingProductBestPopular.isFavorite =
           !existingProductBestPopular.isFavorite;
-      }
-      if (product.id === state.product.id) {
-        state.product.isFavorite = !state.product.isFavorite;
       }
     },
   },

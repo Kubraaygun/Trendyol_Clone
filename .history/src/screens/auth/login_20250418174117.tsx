@@ -11,12 +11,10 @@ import {LoginForm} from '../../models/ui/loginForm';
 import {useDispatch, useSelector} from 'react-redux';
 import {userLogin} from '../../store/actions/authActions';
 import {AppDispatch, RootState} from '../../store';
-import {useNavigation} from '@react-navigation/native';
 // create a component
 const Login: React.FC = () => {
-  const navigation = useNavigation();
   const dispatch = useDispatch<AppDispatch>();
-  const {isLogin, pending} = useSelector((state: RootState) => state.auth);
+  const {isLogin} = useSelector((state: RootState) => state.auth);
   const initialValues: LoginForm = {
     username: 'johnd',
     password: 'm38rmF$',
@@ -50,11 +48,7 @@ const Login: React.FC = () => {
               />
               <Text style={styles.forgotPassword}>Şifremi Unuttum</Text>
               <View style={{marginTop: height * 0.05}}>
-                <Button
-                  disabled={pending}
-                  onPress={handleSubmit}
-                  title="Giriş Yap"
-                />
+                <Button onPress={handleSubmit} title="Giriş Yap" />
               </View>
             </View>
           )}

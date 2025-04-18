@@ -7,7 +7,7 @@ import ProductItem from '../../components/products/productItem';
 
 const Favorites: React.FC = () => {
   const {favorites} = useSelector((state: RootState) => state.favorites);
-
+  console.log(favorites);
   return (
     <SafeAreaView style={defaultScreenStyles.safeAreaContainer}>
       <View style={defaultScreenStyles.container}>

@@ -51,7 +51,7 @@ const Login: React.FC = () => {
               <Text style={styles.forgotPassword}>Şifremi Unuttum</Text>
               <View style={{marginTop: height * 0.05}}>
                 <Button
-                  disabled={pending}
+                  disebled={pending}
                   onPress={handleSubmit}
                   title="Giriş Yap"
                 />
