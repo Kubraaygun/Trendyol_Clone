@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 import {SafeAreaView, Text} from 'react-native';
-import {useSelector} from 'react-redux';
-import {RootState} from '../../store';
 const Profile: React.FC = ({navigation, route}) => {
-  const {token} = useSelector((state: RootState) => state.auth);
   return (
     <SafeAreaView>
-      <Text>{token}</Text>
+      <Text>Profile</Text>
     </SafeAreaView>
   );
 };

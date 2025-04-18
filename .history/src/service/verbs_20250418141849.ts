@@ -6,6 +6,6 @@ export async function getRequest(params: object, URL: string) {
 }
 export async function postRequest(payload: object, URL: string) {
   const response = await Client.post(URL, payload);
-
+  console.log('response', response);
   return response;
 }

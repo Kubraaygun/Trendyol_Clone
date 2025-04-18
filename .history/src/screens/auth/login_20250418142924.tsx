@@ -16,7 +16,7 @@ const Login: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const initialValues: LoginForm = {
     username: 'johnd',
-    password: 'm38rmF$',
+    password: 'pass123',
   };
   return (
     <SafeAreaView style={defaultScreenStyles.safeAreaContainer}>

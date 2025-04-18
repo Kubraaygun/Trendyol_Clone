@@ -15,8 +15,8 @@ import {AppDispatch} from '../../store';
 const Login: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const initialValues: LoginForm = {
-    username: 'johnd',
-    password: 'm38rmF$',
+    username: 'john_doe',
+    password: 'pass123',
   };
   return (
     <SafeAreaView style={defaultScreenStyles.safeAreaContainer}>

@@ -6,7 +6,7 @@ const Profile: React.FC = ({navigation, route}) => {
   const {token} = useSelector((state: RootState) => state.auth);
   return (
     <SafeAreaView>
-      <Text>{token}</Text>
+      <Text>Profile</Text>
     </SafeAreaView>
   );
 };

@@ -8,7 +8,6 @@ const initialState: AuthState = {
   user: null,
   error: null,
   pending: false,
-  token: null,
 };
 
 export const authSlice = createSlice({
@@ -23,7 +22,6 @@ export const authSlice = createSlice({
       .addCase(userLogin.fulfilled, (state, action) => {
         state.pending = false;
         state.isLogin = true;
-        state.token = action.payload.token;
       })
       .addCase(userLogin.rejected, (state, action) => {
         state.pending = false;

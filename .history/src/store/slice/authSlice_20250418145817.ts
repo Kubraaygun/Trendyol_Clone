@@ -8,7 +8,6 @@ const initialState: AuthState = {
   user: null,
   error: null,
   pending: false,
-  token: null,
 };
 
 export const authSlice = createSlice({
@@ -16,21 +15,11 @@ export const authSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: builder => {
-    builder
-      .addCase(userLogin.pending, state => {
-        state.pending = true;
-      })
-      .addCase(userLogin.fulfilled, (state, action) => {
-        state.pending = false;
-        state.isLogin = true;
-        state.token = action.payload.token;
-      })
-      .addCase(userLogin.rejected, (state, action) => {
-        state.pending = false;
-        state.error = action.error;
-        state.isLogin = false;
-      });
+    builder.addCase(getAllCategories.pending, state => {
+      state.pending = true;
+    });
   },
 });
+
 // export const {setCategory} = authSlice.actions;
 export default authSlice.reducer;

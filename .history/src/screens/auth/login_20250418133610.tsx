@@ -8,40 +8,30 @@ import {height} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
 import {Formik} from 'formik';
 import {LoginForm} from '../../models/ui/loginForm';
-import {useDispatch} from 'react-redux';
-import {userLogin} from '../../store/actions/authActions';
-import {AppDispatch} from '../../store';
 // create a component
 const Login: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
   const initialValues: LoginForm = {
-    username: 'johnd',
-    password: 'm38rmF$',
+    email: 'serhat@gmail.com',
+    password: '123456',
   };
   return (
     <SafeAreaView style={defaultScreenStyles.safeAreaContainer}>
       <ScrollView>
         <Formik
           initialValues={initialValues}
-          onSubmit={values => dispatch(userLogin(values))}>
+          onSubmit={values => console.log(values)}>
           {({handleChange, handleBlur, handleSubmit, values}) => (
             <View style={defaultScreenStyles.container}>
               <Input
-                onChangeText={handleChange('username')}
-                onBlur={handleBlur('username')}
-                value={values.username}
-                title="Kullanıcı Adı"
+                onBlur={handleBlur('email')}
+                value={values.email}
+                value={values.email}
+                title="Eposta"
               />
-              <Input
-                onChangeText={handleChange('password')}
-                onBlur={handleBlur('password')}
-                secureTextEntry
-                value={values.password}
-                title="Şifre"
-              />
+              <Input secureTextEntry value={values.password} title="Şifre" />
               <Text style={styles.forgotPassword}>Şifremi Unuttum</Text>
               <View style={{marginTop: height * 0.05}}>
-                <Button onPress={handleSubmit} title="Giriş Yap" />
+                <Button title="Giriş Yap" />
               </View>
             </View>
           )}

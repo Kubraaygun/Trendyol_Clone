@@ -10,20 +10,19 @@ import {Formik} from 'formik';
 import {LoginForm} from '../../models/ui/loginForm';
 import {useDispatch} from 'react-redux';
 import {userLogin} from '../../store/actions/authActions';
-import {AppDispatch} from '../../store';
 // create a component
 const Login: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
   const initialValues: LoginForm = {
-    username: 'johnd',
-    password: 'm38rmF$',
+    username: 'john_doe',
+    password: 'pass123',
   };
   return (
     <SafeAreaView style={defaultScreenStyles.safeAreaContainer}>
       <ScrollView>
         <Formik
           initialValues={initialValues}
-          onSubmit={values => dispatch(userLogin(values))}>
+          onSubmit={values => dispatch(userLogin(values)}>
           {({handleChange, handleBlur, handleSubmit, values}) => (
             <View style={defaultScreenStyles.container}>
               <Input

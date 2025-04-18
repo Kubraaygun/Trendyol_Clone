@@ -11,8 +11,9 @@ export const store = configureStore({
     cart: cartSlice.reducer,
     auth: authSlice.reducer,
   },
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({serializableCheck: false}),
+  middleware: getDefaultMiddleware => getDefaultMiddleware(
+    serializableCheck:false
+  ),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

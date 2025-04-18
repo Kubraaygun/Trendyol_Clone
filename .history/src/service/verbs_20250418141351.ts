@@ -4,8 +4,9 @@ export async function getRequest(params: object, URL: string) {
   const response = await Client.get(URL, params);
   return response;
 }
-export async function postRequest(payload: object, URL: string) {
-  const response = await Client.post(URL, payload);
-
+export async function postRequest(params: object, URL: string) {
+  console.log('params', params);
+  console.log('params', params);
+  const response = await Client.post(URL, params);
   return response;
 }
