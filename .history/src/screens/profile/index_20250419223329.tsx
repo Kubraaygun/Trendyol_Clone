@@ -1,9 +1,8 @@
 import React, {useEffect} from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {AppDispatch, RootState} from '../../store';
 import {getUserInfo} from '../../store/actions/userActions';
-import Avatar from '../../components/user/avatar';
 const Profile: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const {user} = useSelector((state: RootState) => state.user);
@@ -12,19 +11,17 @@ const Profile: React.FC = () => {
     dispatch(getUserInfo({id: 1}));
   }, [dispatch]);
   return (
-    <ScrollView>
-      <Avatar />
+    <SafeAreaView>
       <Text>
-        {user?.name.firstname} {user?.name.lastname}
+        {user?.name.firstname}
+        {user?.name.lastname}
       </Text>
-    </ScrollView>
+    </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+const styles=StyleSheet.create({
+  container: flex: 1,
+})
 //make this component available to the app
 export default Profile;

@@ -3,7 +3,6 @@ import {SafeAreaView, ScrollView, StyleSheet, Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {AppDispatch, RootState} from '../../store';
 import {getUserInfo} from '../../store/actions/userActions';
-import Avatar from '../../components/user/avatar';
 const Profile: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const {user} = useSelector((state: RootState) => state.user);
@@ -13,7 +12,6 @@ const Profile: React.FC = () => {
   }, [dispatch]);
   return (
     <ScrollView>
-      <Avatar />
       <Text>
         {user?.name.firstname} {user?.name.lastname}
       </Text>
