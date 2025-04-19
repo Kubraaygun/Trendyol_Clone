@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {getAllCategories} from '../actions/categoriesAction';
 import {AuthState} from '../../models/data/authState';
-import {userLogin, userLogOut} from '../actions/authActions';
+import {userLogin} from '../actions/authActions';
 
 const initialState: AuthState = {
   isLogin: false,
@@ -37,10 +37,10 @@ export const authSlice = createSlice({
         state.pending = false;
         state.error = action.error;
         state.isLogin = false;
-      })
-      .addCase(userLogOut.fulfilled, (state, action) => {
+      });
+      .addCase(userLogin.rejected, (state, action) => {
         state.pending = false;
-        state.token = null;
+        state.error = action.error;
         state.isLogin = false;
       });
   },

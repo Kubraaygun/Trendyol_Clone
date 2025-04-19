@@ -16,13 +16,18 @@ const userLogin = createAsyncThunk('auth/userLogin', async (params: object) => {
     return error;
   }
 });
-const userLogOut = createAsyncThunk('auth/userLogOut', async () => {
-  try {
-    await AsyncStorage.removeItem('token');
+const userLogOut = createAsyncThunk(
+  'auth/userLogin',
+  async (params: object) => {
+    try {
+      if (response.data && response.data.token) {
+        await AsyncStorage.setItem('token', response.data.token);
+      }
 
-    return null;
-  } catch (error) {
-    return error;
-  }
-});
+      return response.data;
+    } catch (error) {
+      return error;
+    }
+  },
+);
 export {userLogin, userLogOut};

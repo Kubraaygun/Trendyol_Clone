@@ -6,10 +6,7 @@ import {getUserInfo} from '../../store/actions/userActions';
 import Avatar from '../../components/user/avatar';
 import Button from '../../components/ui/button';
 import {userLogOut} from '../../store/actions/authActions';
-import {useNavigation} from '@react-navigation/native';
-import {AUTHNAVIGATOR} from '../../utils/routes';
 const Profile: React.FC = () => {
-  const navigation = useNavigation();
   const dispatch = useDispatch<AppDispatch>();
   const {user} = useSelector((state: RootState) => state.user);
   const {isLogin} = useSelector((state: RootState) => state.auth);
@@ -60,9 +57,7 @@ const Profile: React.FC = () => {
           <Button
             style={{marginTop: 10}}
             title="Giriş Yap"
-            onPress={() => {
-              navigation.navigate(AUTHNAVIGATOR.LOGIN);
-            }}
+            onPress={() => {}}
           />
         </View>
       )}
