@@ -470,6 +470,7 @@
 			baseConfigurationReference = AC553E3E0FC29E1F48BDB607 /* Pods-trendyol.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -479,6 +480,17 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_CPLUSPLUSFLAGS = "\"-std=c++17 -stdlib=libc++\"";
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-Wno-comma",
+					"-Wno-shorten-64-to-32",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -497,6 +509,7 @@
 			baseConfigurationReference = F2B38A8039E07886736AF7E3 /* Pods-trendyol.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = trendyol/Info.plist;
@@ -505,6 +518,18 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_CPLUSPLUSFLAGS = "\"-std=c++17 -stdlib=libc++\"";
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-DNDEBUG",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-Wno-comma",
+					"-Wno-shorten-64-to-32",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
