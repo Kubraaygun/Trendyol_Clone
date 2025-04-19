@@ -12,10 +12,7 @@ const Profile: React.FC = () => {
   }, [dispatch]);
   return (
     <SafeAreaView>
-      <Text>
-        {user?.name.firstname}
-        {user?.name.lastname}
-      </Text>
+      <Text>{user?.name.firstname}</Text>
     </SafeAreaView>
   );
 };

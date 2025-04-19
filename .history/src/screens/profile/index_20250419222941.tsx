@@ -5,17 +5,14 @@ import {AppDispatch, RootState} from '../../store';
 import {getUserInfo} from '../../store/actions/userActions';
 const Profile: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const {user} = useSelector((state: RootState) => state.user);
+  const {token} = useSelector((state: RootState) => state.auth);
 
   useEffect(() => {
-    dispatch(getUserInfo({id: 1}));
+    dispatch(getUserInfo());
   }, [dispatch]);
   return (
     <SafeAreaView>
-      <Text>
-        {user?.name.firstname}
-        {user?.name.lastname}
-      </Text>
+      <Text>{token}</Text>
     </SafeAreaView>
   );
 };
