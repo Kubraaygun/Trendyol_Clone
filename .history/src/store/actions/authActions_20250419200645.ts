@@ -9,6 +9,8 @@ const userLogin = createAsyncThunk('auth/userLogin', async (params: object) => {
 
     if (response.data && response.data.token) {
       await AsyncStorage.setItem('token', response.data.token);
+      const storedToken = await AsyncStorage.getItem('token');
+      console.log('Stored Token after setItem:', storedToken);
     }
 
     return response.data;

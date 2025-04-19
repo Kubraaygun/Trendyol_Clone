@@ -18,7 +18,6 @@ export const authSlice = createSlice({
     checkUser: (state, action) => {
       if (action?.payload) {
         state.isLogin = true;
-        state.token = action.payload;
       }
     },
   },

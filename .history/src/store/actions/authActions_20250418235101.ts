@@ -6,11 +6,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const userLogin = createAsyncThunk('auth/userLogin', async (params: object) => {
   try {
     const response = await postRequest(params, AUTH_URLS.LOGIN);
-
+    console.log('response', response.data);
     if (response.data && response.data.token) {
       await AsyncStorage.setItem('token', response.data.token);
     }
-
     return response.data;
   } catch (error) {
     return error;

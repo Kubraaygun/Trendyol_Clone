@@ -10,11 +10,10 @@ import Login from '../screens/auth/login';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useDispatch} from 'react-redux';
 import {checkUser} from '../store/slice/authSlice';
-import {AppDispatch} from '../store';
 const Stack = createNativeStackNavigator();
 
 const RootNavigator: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
   const getState = async () => {
     const token = await AsyncStorage.getItem('token');
     if (token) {

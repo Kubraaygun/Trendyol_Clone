@@ -18,7 +18,6 @@ export const authSlice = createSlice({
     checkUser: (state, action) => {
       if (action?.payload) {
         state.isLogin = true;
-        state.token = action.payload;
       }
     },
   },
@@ -42,5 +41,5 @@ export const authSlice = createSlice({
 });
 
 // export const {setCategory} = authSlice.actions;
-export const {checkUser} = authSlice.actions;
+export default {checkUser} = authSlice.actions;
 export default authSlice.reducer;
