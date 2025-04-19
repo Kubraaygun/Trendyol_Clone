@@ -6,5 +6,3 @@ function getInitials(firstName: string, lastName: string) {
 
   return `${firstInitial}${lastInitial}`;
 }
-
-export {getInitials};

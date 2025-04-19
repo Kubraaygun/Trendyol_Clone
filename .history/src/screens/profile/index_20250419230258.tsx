@@ -29,8 +29,8 @@ const Profile: React.FC = () => {
             <Text style={{fontSize: 20, marginTop: 10}}>{user?.email}</Text>
           </View>
           <View style={{padding: 20}}>
-            <Button title="Profil Düzenle" onPress={() => {}} />
-            <Button style={{marginTop: 10}} title="Çıkış " onPress={() => {}} />
+            <Button title="Edit" onPress={() => {}} />
+            <Button style={{marginTop: 10}} title="Edit" onPress={() => {}} />
           </View>
         </View>
       ) : (

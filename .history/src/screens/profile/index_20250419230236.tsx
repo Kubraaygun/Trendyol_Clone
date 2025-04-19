@@ -14,28 +14,28 @@ const Profile: React.FC = () => {
   }, [dispatch]);
   return (
     <ScrollView style={styles.container}>
-      {user ? (
+    {
+      user?(
         <View>
-          <View style={{alignItems: 'center', marginTop: 20}}>
-            <Avatar
-              name={user?.name.firstname}
-              surname={user?.name.lastname}
-              image={user?.image}
-              size={150}
-            />
-            <Text style={{fontSize: 30, marginTop: 10, fontWeight: 'bold'}}>
-              {user?.name.firstname} {user?.name.lastname}
-            </Text>
-            <Text style={{fontSize: 20, marginTop: 10}}>{user?.email}</Text>
-          </View>
-          <View style={{padding: 20}}>
-            <Button title="Profil Düzenle" onPress={() => {}} />
-            <Button style={{marginTop: 10}} title="Çıkış " onPress={() => {}} />
-          </View>
-        </View>
-      ) : (
-        <Text>Loading...</Text>
-      )}
+        <View style={{alignItems: 'center', marginTop: 20}}>
+        <Avatar
+          name={user?.name.firstname}
+          surname={user?.name.lastname}
+          image={user?.image}
+          size={150}
+        />
+        <Text style={{fontSize: 30, marginTop: 10, fontWeight: 'bold'}}>
+          {user?.name.firstname} {user?.name.lastname}
+        </Text>
+        <Text style={{fontSize: 20, marginTop: 10}}>{user?.email}</Text>
+      </View>
+
+      <View style={{padding: 20}}>
+        <Button title="Edit" onPress={() => {}} />
+        <Button style={{marginTop: 10}} title="Edit" onPress={() => {}} />
+      </View> v
+      ):<Text>Loading...</Text>
+    }
     </ScrollView>
   );
 };

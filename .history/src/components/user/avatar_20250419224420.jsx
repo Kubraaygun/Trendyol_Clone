@@ -6,10 +6,10 @@ import {Colors} from '../../theme/colors';
 import {getInitials} from '../../utils/function';
 
 // create a component
-const Avatar: React.FC<AvatarProps> = ({name, surname, image, size}) => {
+const Avatar: React.FC<AvatarProps> = () => {
   return (
-    <View style={[styles.container, {width: size, height: size}]}>
-      <Text style={{fontSize: 30}}>{getInitials(name, surname)}</Text>
+    <View style={styles.container}>
+      <Text style={{fontSize: 30}}>{getInitials}</Text>
     </View>
   );
 };
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.GREEN,
     width: 100,
     height: 100,
-    borderRadius: 30,
+    borderRadius: 50,
   },
 });
 

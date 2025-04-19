@@ -1,0 +1,44 @@
+import React, {useEffect} from 'react';
+import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
+import {AppDispatch, RootState} from '../../store';
+import {getUserInfo} from '../../store/actions/userActions';
+import Avatar from '../../components/user/avatar';
+import Button from '../../components/ui/button';
+const Profile: React.FC = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const {user} = useSelector((state: RootState) => state.user);
+
+  useEffect(() => {
+    dispatch(getUserInfo({id: 2}));
+  }, [dispatch]);
+  return (
+    <ScrollView>
+      <View style={{alignItems: 'center', marginTop: 20}}>
+        <Avatar
+          name={user?.name.firstname}
+          surname={user?.name.lastname}
+          image={user?.image}
+          size={150}
+        />
+        <Text style={{fontSize: 30, marginTop: 10, fontWeight: 'bold'}}>
+          {user?.name.firstname} {user?.name.lastname}
+        </Text>
+        <Text style={{fontSize: 20, marginTop: 10}}>{user?.email}</Text>
+      </View>
+
+      <View style={{padding: 20}}>
+        <Button title="Edit" onPress={() => {}} />
+        <Button style={{marginTop: 10}} title="Edit" onPress={() => {}} />
+      </View>
+    </ScrollView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+//make this component available to the app
+export default Profile;

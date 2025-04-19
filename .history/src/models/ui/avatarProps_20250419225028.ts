@@ -1,7 +1,7 @@
 interface AvatarProps {
-  name: string | undefined;
+  name: string;
   surname: string | undefined;
-  image?: string | undefined;
+  image?: string;
   size?: number;
 }
 export type {AvatarProps};
