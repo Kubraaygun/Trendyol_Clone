@@ -16,6 +16,7 @@ export const AUTHNAVIGATOR = {
   LOGIN: 'Giriş Yap',
   REGISTER: 'Kayıt Ol',
 };
-export const NOTIFICATIONAVIGATOR = {
-  NOTIFICATIONS: 'Bildirimler',
+export const AUTHNAVIGATOR = {
+  LOGIN: 'Giriş Yap',
+  REGISTER: 'Kayıt Ol',
 };

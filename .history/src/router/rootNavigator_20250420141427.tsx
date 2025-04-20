@@ -16,7 +16,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useDispatch} from 'react-redux';
 import {checkUser} from '../store/slice/authSlice';
 import {AppDispatch} from '../store';
-import Notifications from '../screens/notification';
 const Stack = createNativeStackNavigator();
 
 const RootNavigator: React.FC = () => {
@@ -54,7 +53,7 @@ const RootNavigator: React.FC = () => {
       <Stack.Screen name={AUTHNAVIGATOR.LOGIN} component={Login} />
       <Stack.Screen
         name={NOTIFICATIONAVIGATOR.NOTIFICATIONS}
-        component={Notifications}
+        component={Login}
       />
     </Stack.Navigator>
   );
