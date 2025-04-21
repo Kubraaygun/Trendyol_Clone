@@ -36,3 +36,7 @@ With this project, I aimed to implement the core features of an e-commerce app o
 ## API Source
 
 - [Fake Store API](https://fakestoreapi.com/)
+
+## ScreenShot
+
+![](./src//assets/trendyol.gif)
