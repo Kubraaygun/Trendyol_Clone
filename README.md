@@ -1,27 +1,27 @@
 # Trendyol Clone Project
 
-React Native ile geliştirilmiş bir Trendyol Clone projesidir. Kullanıcılar ürünleri inceleyebilir, favorilere ekleyebilir, sepete ürün ekleyebilir ve giriş yaparak profil bilgilerini görüntüleyebilir.
+This is a Trendyol Clone project developed with React Native and TypeScript. Users can browse products, add them to their favorites, add products to the cart, and view profile information by logging in.
 
 ## Project Purpose
 
-Bu projeyle React Native üzerinde bir e-ticaret uygulamasının temel fonksiyonlarını geliştirerek aşağıdaki konularda pratik yapmayı amaçladım.
+With this project, I aimed to implement the core features of an e-commerce app on React Native using TypeScript, and practice the following concepts:
 
-- Redux Toolkit ile veri yönetimi
-- API kullanımı ve veri çekme
-- Navigation yapısı kurma
-- Gerçek kullanıcı akışlarını simüle etme
+- Data management with Redux Toolkit
+- API usage and data fetching
+- Setting up navigation structure
+- Simulating real user flows
 
 ## Features
 
-- Ürünleri listeleme ve detay sayfası
-- Kategoriye göre filtreleme
-- Popüler ve çok satan ürün listeleri
-- Favorilere ekleme
-- Sepete ürün ekleme
-- Giriş yapma ve profil sayfası
-- AsyncStorage ile token saklama
-- Redux Toolkit ile state yönetimi
-- Fake Store API entegrasyonu
+- Listing products and product detail page
+- Filtering by category
+- Popular and best-selling product lists
+- Adding products to favorites
+- Adding products to the cart
+- User login and profile page
+- Storing tokens with AsyncStorage
+- State management with Redux Toolkit
+- Fake Store API integration
 
 ## Technologies Used
 
